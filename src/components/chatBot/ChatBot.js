@@ -204,6 +204,20 @@ export default function ChatBot() {
           {/* Input Area */}
           <div className="chatbot-footer">
             <div className="chatbot-input-container">
+              <button
+                type="button"
+                className="chatbot-plus-btn"
+                onClick={() => {
+                  const randomPrompt =
+                    SUGGESTIONS[Math.floor(Math.random() * SUGGESTIONS.length)];
+                  setInput(randomPrompt);
+                  inputRef.current?.focus();
+                }}
+                title="Quick Prompt"
+                aria-label="Add Quick Prompt"
+              >
+                <i className="fas fa-plus" />
+              </button>
               <input
                 ref={inputRef}
                 type="text"
@@ -213,21 +227,18 @@ export default function ChatBot() {
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 disabled={isLoading}
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.5",
-                  fontWeight: "500",
-                  textAlign: "left",
-                  padding: "10px 6px"
-                }}
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
               />
               <button
+                type="button"
                 className="chatbot-send-btn"
                 onClick={() => handleSend()}
                 disabled={!input.trim() || isLoading}
                 aria-label="Send Message"
               >
-                <i className="fas fa-paper-plane" />
+                <i className="fas fa-arrow-up" />
               </button>
             </div>
             <p className="chatbot-disclaimer">
