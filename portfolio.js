@@ -23,7 +23,7 @@ const greeting = {
   subTitle: emoji(
     "Full Stack AI Engineer with 1+ years of experience specializing in LLMs, RAG pipelines, AI Agents, and workflow automation. Skilled in FastAPI, Next.js, n8n, LangGraph, CrewAI, Docker, and Cloud/VPS. Published ML/DL researcher (Q1, Q2 journals)."
   ),
-  resumeLink: "https://JamilKhanEmon.github.io/jamil_khan.pdf", // আপনার লাইভ সিভির লিংক বা ড্রাইভ লিংক
+  resumeLink: "https://jamilkhanemon.github.io/jamil_khan.pdf", // আপনার লাইভ সিভির লিংক বা ড্রাইভ লিংক
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 

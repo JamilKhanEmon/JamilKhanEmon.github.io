@@ -41,8 +41,8 @@ export default function Greeting() {
                   <Button
                     text="Download my resume"
                     newTab={true}
-                    href={greeting.resumeLink}
-                    download="Md_Jamil_Khan_Resume.pdf"
+                    href={process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/jamil_khan.pdf` : "./jamil_khan.pdf"}
+                    download="jamil_khan.pdf"
                   />
                 )}
               </div>
