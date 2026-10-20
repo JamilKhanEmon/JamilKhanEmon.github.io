@@ -398,15 +398,15 @@
 
 .chatbot-input {
   flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
   font-family: inherit;
-  font-size: 16.5px !important;
-  line-height: 1.5;
-  padding: 8px 0;
-  font-weight: 500;
-  width: 100%;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  padding: 10px 4px !important;
+  font-weight: 500 !important;
+  width: 100% !important;
   text-align: left !important;
 }
 
@@ -415,8 +415,8 @@
   caret-color: #6c63ff;
   text-align: left !important;
   &::placeholder {
-    color: rgba(255, 255, 255, 0.65) !important;
-    font-size: 15px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 16px !important;
     font-weight: 400;
     text-align: left !important;
   }
@@ -427,8 +427,8 @@
   caret-color: #6c63ff;
   text-align: left !important;
   &::placeholder {
-    color: rgba(0, 0, 0, 0.55) !important;
-    font-size: 15px !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 16px !important;
     font-weight: 400;
     text-align: left !important;
   }
@@ -557,8 +557,8 @@
   }
 
   .chatbot-input {
-    font-size: 16.5px !important; /* Prevents unwanted iOS browser zoom */
-    padding: 8px 0;
+    font-size: 18px !important;
+    padding: 10px 4px !important;
   }
 
   .chatbot-send-btn {

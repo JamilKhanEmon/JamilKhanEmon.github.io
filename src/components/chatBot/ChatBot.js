@@ -213,6 +213,13 @@ export default function ChatBot() {
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 disabled={isLoading}
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "1.5",
+                  fontWeight: "500",
+                  textAlign: "left",
+                  padding: "10px 6px"
+                }}
               />
               <button
                 className="chatbot-send-btn"
