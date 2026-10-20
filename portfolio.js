@@ -23,7 +23,7 @@ const greeting = {
   subTitle: emoji(
     "Full Stack AI Engineer with 1+ years of experience specializing in LLMs, RAG pipelines, AI Agents, and workflow automation. Skilled in FastAPI, Next.js, n8n, LangGraph, CrewAI, Docker, and Cloud/VPS. Published ML/DL researcher (Q1, Q2 journals)."
   ),
-  resumeLink: "https://jamilkhanemon.vercel.app/", // আপনার লাইভ সিভির লিংক বা ড্রাইভ লিংক
+  resumeLink: "https://JamilKhanEmon.github.io/jamil_khan.pdf", // আপনার লাইভ সিভির লিংক বা ড্রাইভ লিংক
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -49,7 +49,7 @@ const skillsSection = {
   skills: [
     "Develop End-to-End Multi-Agent Systems & RAG pipelines (LangGraph, CrewAI, GPT-4o, Gemini, Ollama)",
     "Build automated workflows using n8n and Headless Web Crawlers (OpenClaw, Meta Ads & APIs)",
-    "High-performance backend microservices with FastAPI, Flask, Node.js, Redis & PostgreSQL",
+    "High-performance backend microservices with FastAPI, Django, Flask, Node.js, Redis & PostgreSQL",
     "Interactive, modern frontends using Next.js 15, React, TypeScript & Tailwind CSS",
     "Computer Vision & OCR applications with YOLO11, EasyOCR, OpenCV & Deep Learning models",
     "Cloud & DevOps deployment with Docker, Docker Compose, Nginx, CI/CD GitHub Actions & VPS"
@@ -58,7 +58,8 @@ const skillsSection = {
   /* Iconify / Font Awesome Classnames */
   softwareSkills: [
     {skillName: "Python", fontAwesomeClassname: "logos:python"},
-    {skillName: "FastAPI", fontAwesomeClassname: "logos:fastapi"},
+    {skillName: "FastAPI", fontAwesomeClassname: "logos:fastapi-icon"},
+    {skillName: "Django", fontAwesomeClassname: "logos:django-icon"},
     {skillName: "LangChain", fontAwesomeClassname: "simple-icons:langchain"},
     {skillName: "n8n", fontAwesomeClassname: "simple-icons:n8n"},
     {skillName: "PyTorch", fontAwesomeClassname: "logos:pytorch-icon"},
@@ -120,7 +121,7 @@ const techStack = {
       progressPercentage: "90%"
     },
     {
-      Stack: "Backend Development (FastAPI, Python, PostgreSQL, Redis)",
+      Stack: "Backend Development (FastAPI, Django, Python, PostgreSQL, Redis)",
       progressPercentage: "90%"
     },
     {
@@ -186,7 +187,7 @@ const workExperiences = {
 // Open Source Section (GitHub Projects)
 const openSource = {
   showGithubProfile: "true",
-  display: true,
+  display: false,
   githubUserName: "JamilKhanEmon" // আপনার গিটহাব ইউজারনেম
 };
 
@@ -227,7 +228,7 @@ const bigProjects = {
 const achievementSection = {
   title: "Publications & Achievements",
   subtitle:
-    "Peer-reviewed scientific publications in top-tier international journals and research milestones",
+    "Scientific publications in top-tier international journals and research milestones",
 
   achievementsCards: [
     {
@@ -308,8 +309,8 @@ const isHireable = true; // Open for new opportunities
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-  link: "https://jamilkhanemon.vercel.app/",
-  display: true // Set to false to hide resume link in header
+  link: "https://JamilKhanEmon.github.io/resume.pdf",
+  display: false // Set to false to hide resume link in header
 };
 
 export {

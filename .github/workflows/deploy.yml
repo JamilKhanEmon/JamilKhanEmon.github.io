@@ -32,6 +32,27 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      - name: Compile LaTeX Resume 📄
+        if: hashFiles('resume/resume.tex') != ''
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: resume
+          args: "-pdf -file-line-error -interaction=nonstopmode"
+        continue-on-error: true
+
+      - name: Copy Compiled Resume 📋
+        run: |
+          if [ -f resume/resume.pdf ]; then
+            echo "Resume compiled successfully. Copying to public and greeting..."
+            mkdir -p public
+            cp resume/resume.pdf public/jamil_khan.pdf
+            cp resume/resume.pdf public/resume.pdf
+            cp resume/resume.pdf src/containers/greeting/resume.pdf
+          else
+            echo "resume.pdf not found in resume/ folder, keeping existing fallback jamil_khan.pdf."
+          fi
+
       - name: Setup Node.js 🔧
         uses: actions/setup-node@v4
         with:

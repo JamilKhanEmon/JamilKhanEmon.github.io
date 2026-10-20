@@ -97,21 +97,20 @@ export default function ChatBot() {
 
   return (
     <div className={`chatbot-wrapper ${isDark ? "dark-theme" : "light-theme"}`}>
-      {/* Floating Toggle Button */}
+      {/* Floating Circular Trigger Button */}
       <button
-        className={`chatbot-toggle-btn ${isOpen ? "active" : ""}`}
+        className={`chatbot-circle-btn ${isOpen ? "active" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle AI Assistant"
-        title="Chat with Jamil Khan's AI"
+        title={isOpen ? "Close Chat" : "Chat with Jamil's AI"}
       >
-        <span className="chatbot-toggle-icon">
+        <div className="circle-btn-inner">
           {isOpen ? (
             <i className="fas fa-times" />
           ) : (
             <i className="fas fa-robot" />
           )}
-        </span>
-        <span className="chatbot-toggle-text">Ask Jamil AI</span>
+        </div>
         {!isOpen && hasUnread && <span className="chatbot-unread-dot" />}
       </button>
 
@@ -127,13 +126,12 @@ export default function ChatBot() {
               </div>
               <div className="chatbot-header-text">
                 <h4 className="chatbot-name">Jamil AI Assistant</h4>
-                <p className="chatbot-tagline">
-                  Grounded on CV &amp; Experience
-                </p>
+                <p className="chatbot-tagline">Online</p>
               </div>
             </div>
             <div className="chatbot-header-actions">
               <button
+                type="button"
                 className="chatbot-action-btn"
                 onClick={clearChat}
                 title="Clear conversation"
@@ -142,6 +140,7 @@ export default function ChatBot() {
                 <i className="fas fa-trash-alt" />
               </button>
               <button
+                type="button"
                 className="chatbot-action-btn"
                 onClick={() => setIsOpen(false)}
                 title="Close chat"
@@ -152,11 +151,12 @@ export default function ChatBot() {
             </div>
           </div>
 
-          {/* Quick Suggestions */}
+          {/* Quick Suggestions Chips */}
           <div className="chatbot-suggestions">
             {SUGGESTIONS.map((text, idx) => (
               <button
                 key={idx}
+                type="button"
                 className="chatbot-chip"
                 onClick={() => handleSend(text)}
                 disabled={isLoading}
@@ -180,8 +180,51 @@ export default function ChatBot() {
                     <i className="fas fa-brain" />
                   </div>
                 )}
-                <div className="chatbot-message-bubble">
-                  <p>{msg.content}</p>
+                <div className="chatbot-message-content-col">
+                  <div className="chatbot-message-bubble">
+                    <p>{msg.content}</p>
+                  </div>
+                  {msg.role === "assistant" &&
+                    (msg.content.includes("jamilkhan.ju@gmail.com") ||
+                      msg.content.includes("+880 1760") ||
+                      msg.content.toLowerCase().includes("whatsapp") ||
+                      msg.content.toLowerCase().includes("email") ||
+                      msg.content.toLowerCase().includes("contact") ||
+                      msg.content.toLowerCase().includes("reach out") ||
+                      msg.content.includes("যোগাযোগ")) && (
+                      <div className="chatbot-quick-contact-actions">
+                        <a
+                          href="mailto:jamilkhan.ju@gmail.com"
+                          className="chatbot-contact-action-btn email-action"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Send Email to Jamil"
+                        >
+                          <i className="fas fa-envelope" />
+                          <span>Email</span>
+                        </a>
+                        <a
+                          href="https://wa.me/8801760413449"
+                          className="chatbot-contact-action-btn whatsapp-action"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Chat on WhatsApp"
+                        >
+                          <i className="fab fa-whatsapp" />
+                          <span>WhatsApp</span>
+                        </a>
+                        <a
+                          href="https://linkedin.com/in/jamilkhanemon"
+                          className="chatbot-contact-action-btn linkedin-action"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="View LinkedIn Profile"
+                        >
+                          <i className="fab fa-linkedin" />
+                          <span>LinkedIn</span>
+                        </a>
+                      </div>
+                    )}
                 </div>
               </div>
             ))}
@@ -201,7 +244,7 @@ export default function ChatBot() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Area */}
+          {/* Input Area (ChatGPT Style Pill) */}
           <div className="chatbot-footer">
             <div className="chatbot-input-container">
               <button
@@ -213,8 +256,8 @@ export default function ChatBot() {
                   setInput(randomPrompt);
                   inputRef.current?.focus();
                 }}
-                title="Quick Prompt"
-                aria-label="Add Quick Prompt"
+                title="Insert Quick Question"
+                aria-label="Insert Quick Question"
               >
                 <i className="fas fa-plus" />
               </button>
@@ -230,6 +273,12 @@ export default function ChatBot() {
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck="false"
+                style={{
+                  transform: "none",
+                  textAlign: "left",
+                  width: "100%",
+                  margin: 0
+                }}
               />
               <button
                 type="button"
@@ -237,13 +286,11 @@ export default function ChatBot() {
                 onClick={() => handleSend()}
                 disabled={!input.trim() || isLoading}
                 aria-label="Send Message"
+                title="Send"
               >
                 <i className="fas fa-arrow-up" />
               </button>
             </div>
-            <p className="chatbot-disclaimer">
-              Strictly verified against Jamil Khan&apos;s CV • Powered by Groq
-            </p>
           </div>
         </div>
       )}
