@@ -158,7 +158,7 @@ const workExperiences = {
     {
       role: "AI Engineer",
       company: "Softvence",
-      companylogo: require("./assets/images/softvenceLogo.jpg"),
+      companylogo: require("./assets/images/softvenceLogo.png"),
       date: "Nov 2025 – Jun 2026",
       desc: "Dhaka, Bangladesh (On-site). Engineered high-performance RAG pipelines and multi-agent systems using GPT-4o, LangGraph, and CrewAI.",
       descBullets: [
