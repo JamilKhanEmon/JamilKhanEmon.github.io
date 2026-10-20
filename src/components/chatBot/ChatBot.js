@@ -36,7 +36,19 @@ export default function ChatBot() {
       scrollToBottom();
       setHasUnread(false);
       setTimeout(() => inputRef.current?.focus(), 200);
+      if (typeof window !== "undefined" && window.innerWidth <= 640) {
+        document.body.style.overflow = "hidden";
+      }
+    } else {
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "unset";
+      }
     }
+    return () => {
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "unset";
+      }
+    };
   }, [isOpen, messages]);
 
   const handleSend = async textToSend => {
