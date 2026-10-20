@@ -39,7 +39,7 @@ export default function ChatBot() {
     }
   }, [isOpen, messages]);
 
-  const handleSend = async (textToSend) => {
+  const handleSend = async textToSend => {
     const query = (textToSend || input).trim();
     if (!query || isLoading) return;
 
@@ -51,12 +51,9 @@ export default function ChatBot() {
 
     try {
       const response = await sendChatMessage(query, updatedMessages);
-      setMessages((prev) => [
-        ...prev,
-        {role: "assistant", content: response}
-      ]);
+      setMessages(prev => [...prev, {role: "assistant", content: response}]);
     } catch (err) {
-      setMessages((prev) => [
+      setMessages(prev => [
         ...prev,
         {
           role: "assistant",
@@ -69,7 +66,7 @@ export default function ChatBot() {
     }
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = e => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSend();
@@ -201,7 +198,7 @@ export default function ChatBot() {
                 className="chatbot-input"
                 placeholder="Ask about Jamil's AI experience..."
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
+                onChange={e => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 disabled={isLoading}
               />

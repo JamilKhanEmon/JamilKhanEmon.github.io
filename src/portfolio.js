@@ -44,7 +44,8 @@ const socialMediaLinks = {
 // Skills Section
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK AI ENGINEER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle:
+    "CRAZY FULL STACK AI ENGINEER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     "Develop End-to-End Multi-Agent Systems & RAG pipelines (LangGraph, CrewAI, GPT-4o, Gemini, Ollama)",
     "Build automated workflows using n8n and Headless Web Crawlers (OpenClaw, Meta Ads & APIs)",
@@ -56,23 +57,23 @@ const skillsSection = {
 
   /* Iconify / Font Awesome Classnames */
   softwareSkills: [
-    { skillName: "Python", fontAwesomeClassname: "logos:python" },
-    { skillName: "FastAPI", fontAwesomeClassname: "logos:fastapi" },
-    { skillName: "LangChain", fontAwesomeClassname: "simple-icons:langchain" },
-    { skillName: "n8n", fontAwesomeClassname: "simple-icons:n8n" },
-    { skillName: "PyTorch", fontAwesomeClassname: "logos:pytorch-icon" },
-    { skillName: "TensorFlow", fontAwesomeClassname: "logos:tensorflow" },
-    { skillName: "OpenCV", fontAwesomeClassname: "logos:opencv" },
-    { skillName: "Next.js", fontAwesomeClassname: "logos:nextjs-icon" },
-    { skillName: "React", fontAwesomeClassname: "logos:react" },
-    { skillName: "TypeScript", fontAwesomeClassname: "logos:typescript-icon" },
-    { skillName: "Docker", fontAwesomeClassname: "logos:docker-icon" },
-    { skillName: "PostgreSQL", fontAwesomeClassname: "logos:postgresql" },
-    { skillName: "MySQL", fontAwesomeClassname: "logos:mysql-icon" },
-    { skillName: "Redis", fontAwesomeClassname: "logos:redis" },
-    { skillName: "AWS", fontAwesomeClassname: "logos:aws" },
-    { skillName: "Linux", fontAwesomeClassname: "logos:linux-tux" },
-    { skillName: "Git", fontAwesomeClassname: "logos:git-icon" }
+    {skillName: "Python", fontAwesomeClassname: "logos:python"},
+    {skillName: "FastAPI", fontAwesomeClassname: "logos:fastapi"},
+    {skillName: "LangChain", fontAwesomeClassname: "simple-icons:langchain"},
+    {skillName: "n8n", fontAwesomeClassname: "simple-icons:n8n"},
+    {skillName: "PyTorch", fontAwesomeClassname: "logos:pytorch-icon"},
+    {skillName: "TensorFlow", fontAwesomeClassname: "logos:tensorflow"},
+    {skillName: "OpenCV", fontAwesomeClassname: "logos:opencv"},
+    {skillName: "Next.js", fontAwesomeClassname: "logos:nextjs-icon"},
+    {skillName: "React", fontAwesomeClassname: "logos:react"},
+    {skillName: "TypeScript", fontAwesomeClassname: "logos:typescript-icon"},
+    {skillName: "Docker", fontAwesomeClassname: "logos:docker-icon"},
+    {skillName: "PostgreSQL", fontAwesomeClassname: "logos:postgresql"},
+    {skillName: "MySQL", fontAwesomeClassname: "logos:mysql-icon"},
+    {skillName: "Redis", fontAwesomeClassname: "logos:redis"},
+    {skillName: "AWS", fontAwesomeClassname: "logos:aws"},
+    {skillName: "Linux", fontAwesomeClassname: "logos:linux-tux"},
+    {skillName: "Git", fontAwesomeClassname: "logos:git-icon"}
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -331,4 +332,3 @@ export {
   isHireable,
   resumeSection
 };
-

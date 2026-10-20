@@ -10,8 +10,7 @@ const getApiKey = () => {
   return process.env.REACT_APP_GROQ_API_KEY || "";
 };
 
-const DEFAULT_MODEL =
-  process.env.REACT_APP_GROQ_MODEL || "qwen/qwen3.8-27b";
+const DEFAULT_MODEL = process.env.REACT_APP_GROQ_MODEL || "qwen/qwen3.8-27b";
 
 export const JAMIL_CV_KNOWLEDGE_BASE = `
 You are the official Executive AI Representative for Jamil Khan (Jamil Khan Emon).
@@ -72,8 +71,8 @@ CORE TECHNICAL SKILLS:
 
 /**
  * Send user query to Groq LLM API with strict CV knowledge base and minimal token context
- * @param {string} userMessage 
- * @param {Array<{role: string, content: string}>} history 
+ * @param {string} userMessage
+ * @param {Array<{role: string, content: string}>} history
  * @returns {Promise<string>}
  */
 export async function sendChatMessage(userMessage, history = []) {
@@ -82,7 +81,7 @@ export async function sendChatMessage(userMessage, history = []) {
   }
 
   // Keep only the last 2 conversation turns to minimize token overhead
-  const compactHistory = history.slice(-4).map((msg) => ({
+  const compactHistory = history.slice(-4).map(msg => ({
     role: msg.role === "assistant" ? "assistant" : "user",
     content: msg.content
   }));

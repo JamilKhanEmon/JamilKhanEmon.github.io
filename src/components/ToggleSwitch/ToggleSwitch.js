@@ -20,9 +20,15 @@ const ToggleSwitch = () => {
       <span className="slider round">
         <span className="theme-icon">
           {isChecked ? (
-            <i className="fas fa-moon" style={{color: "#f1c40f", fontSize: "13px"}} />
+            <i
+              className="fas fa-moon"
+              style={{color: "#f1c40f", fontSize: "13px"}}
+            />
           ) : (
-            <i className="fas fa-sun" style={{color: "#f39c12", fontSize: "13px"}} />
+            <i
+              className="fas fa-sun"
+              style={{color: "#f39c12", fontSize: "13px"}}
+            />
           )}
         </span>
       </span>
@@ -30,4 +36,3 @@ const ToggleSwitch = () => {
   );
 };
 export default ToggleSwitch;
-
