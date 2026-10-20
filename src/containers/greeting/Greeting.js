@@ -38,15 +38,12 @@ export default function Greeting() {
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
-                  <a
-                    href={process.env.PUBLIC_URL + "/jamil_khan.pdf"}
+                  <Button
+                    text="Download my resume"
+                    newTab={true}
+                    href={greeting.resumeLink}
                     download="Md_Jamil_Khan_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
+                  />
                 )}
               </div>
             </div>
