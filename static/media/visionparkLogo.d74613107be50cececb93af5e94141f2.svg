@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="vpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#vpGrad)"/>
+  <!-- Parking 'P' with Computer Vision Bounding Box corners -->
+  <path d="M55 45 L40 45 L40 60" fill="none" stroke="#22D3EE" stroke-width="5" stroke-linecap="round"/>
+  <path d="M145 45 L160 45 L160 60" fill="none" stroke="#22D3EE" stroke-width="5" stroke-linecap="round"/>
+  <path d="M55 155 L40 155 L40 140" fill="none" stroke="#22D3EE" stroke-width="5" stroke-linecap="round"/>
+  <path d="M145 155 L160 155 L160 140" fill="none" stroke="#22D3EE" stroke-width="5" stroke-linecap="round"/>
+  <!-- Parking 'P' -->
+  <text x="86" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="75" font-weight="900" fill="#FFFFFF">P</text>
+  <!-- Camera lens eye -->
+  <circle cx="128" cy="80" r="10" fill="#F43F5E"/>
+  <circle cx="128" cy="80" r="4" fill="#FFFFFF"/>
+  <text x="100" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#67E8F9" text-anchor="middle" letter-spacing="2">VISIONPARK AI</text>
+</svg>

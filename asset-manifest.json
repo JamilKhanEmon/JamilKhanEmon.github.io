@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/JamilKhanEmon/static/css/main.659d6e4c.css",
+    "main.js": "/JamilKhanEmon/static/js/main.a2ee98d9.js",
+    "static/css/64.bba8fa55.chunk.css": "/JamilKhanEmon/static/css/64.bba8fa55.chunk.css",
+    "static/js/64.f858a90b.chunk.js": "/JamilKhanEmon/static/js/64.f858a90b.chunk.js",
+    "static/css/769.b3cbb36b.chunk.css": "/JamilKhanEmon/static/css/769.b3cbb36b.chunk.css",
+    "static/js/769.727d7c2a.chunk.js": "/JamilKhanEmon/static/js/769.727d7c2a.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/JamilKhanEmon/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/elsevierLogo.png": "/JamilKhanEmon/static/media/elsevierLogo.507209a87cbe896efdfd.png",
+    "static/media/jahangirnagarLogo.png": "/JamilKhanEmon/static/media/jahangirnagarLogo.b2bd542965c57b3b088b.png",
+    "static/media/Agustina.woff": "/JamilKhanEmon/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/manOnTable.svg": "/JamilKhanEmon/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/contactMailDark.svg": "/JamilKhanEmon/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
+    "static/media/developerActivity.svg": "/JamilKhanEmon/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
+    "static/media/metropolitanLogo.png": "/JamilKhanEmon/static/media/metropolitanLogo.108b6e76262ae7053001.png",
+    "static/media/softvenceLogo.jpg": "/JamilKhanEmon/static/media/softvenceLogo.02b21a7c14b0bc617a6d.jpg",
+    "static/media/nibizLogo.png": "/JamilKhanEmon/static/media/nibizLogo.9e98f62c6d9f050c9fa0.png",
+    "static/media/skill.svg": "/JamilKhanEmon/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
+    "static/media/resume.pdf": "/JamilKhanEmon/static/media/resume.f0f733dd3cd732b39262.pdf",
+    "index.html": "/JamilKhanEmon/index.html",
+    "static/media/finsightLogo.svg": "/JamilKhanEmon/static/media/finsightLogo.e6c3a8ed701c8d544c537ebd862f342a.svg",
+    "static/media/visionparkLogo.svg": "/JamilKhanEmon/static/media/visionparkLogo.d74613107be50cececb93af5e94141f2.svg",
+    "static/media/leadgenLogo.svg": "/JamilKhanEmon/static/media/leadgenLogo.76926e5de5cdd317156adc327d86d4f4.svg",
+    "static/media/schoolErpLogo.svg": "/JamilKhanEmon/static/media/schoolErpLogo.2ada0a46c462bdd1827d4b1e2b04bfa6.svg",
+    "static/media/talksCardBack.svg": "/JamilKhanEmon/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
+    "main.659d6e4c.css.map": "/JamilKhanEmon/static/css/main.659d6e4c.css.map",
+    "main.a2ee98d9.js.map": "/JamilKhanEmon/static/js/main.a2ee98d9.js.map",
+    "64.bba8fa55.chunk.css.map": "/JamilKhanEmon/static/css/64.bba8fa55.chunk.css.map",
+    "64.f858a90b.chunk.js.map": "/JamilKhanEmon/static/js/64.f858a90b.chunk.js.map",
+    "769.b3cbb36b.chunk.css.map": "/JamilKhanEmon/static/css/769.b3cbb36b.chunk.css.map",
+    "769.727d7c2a.chunk.js.map": "/JamilKhanEmon/static/js/769.727d7c2a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.659d6e4c.css",
+    "static/js/main.a2ee98d9.js"
+  ]
+}
