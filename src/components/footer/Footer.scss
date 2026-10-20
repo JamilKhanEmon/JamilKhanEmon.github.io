@@ -1,0 +1,29 @@
+@import "../../_globalColor";
+
+.footer-text {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: $subTitle !important;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.3px;
+}
+
+.footer-subtext {
+  text-align: center;
+  font-size: 0.88rem;
+  opacity: 0.8;
+  color: $subTitle !important;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.dark-mode {
+  color: $textColorDark !important;
+}
+
+.footer-div {
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
