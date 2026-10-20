@@ -44,3 +44,22 @@
 .software-skill-inline > i:hover ~ p {
   color: $skillsColor;
 }
+
+@media (max-width: 480px) {
+  .software-skill-inline {
+    margin-right: 14px;
+    margin-bottom: 16px;
+
+    > span.iconify {
+      font-size: 2.3rem;
+    }
+
+    > i {
+      font-size: 2.3rem;
+    }
+
+    > p {
+      font-size: 10px;
+    }
+  }
+}

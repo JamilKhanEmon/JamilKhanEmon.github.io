@@ -51,8 +51,8 @@
 }
 .achievement-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 .certificate-card-footer {
   display: flex;
@@ -79,4 +79,15 @@
 }
 span.certificate-tag:hover {
   background: $buttonHover;
+}
+
+@media (max-width: 768px) {
+  .achievement-cards-div {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .certificate-card {
+    padding: 1.2rem;
+  }
 }
