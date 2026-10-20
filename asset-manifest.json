@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/JamilKhanEmon/static/css/main.659d6e4c.css",
-    "main.js": "/JamilKhanEmon/static/js/main.a2ee98d9.js",
+    "main.js": "/JamilKhanEmon/static/js/main.72b1e9f2.js",
     "static/css/64.bba8fa55.chunk.css": "/JamilKhanEmon/static/css/64.bba8fa55.chunk.css",
     "static/js/64.f858a90b.chunk.js": "/JamilKhanEmon/static/js/64.f858a90b.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/JamilKhanEmon/static/css/769.b3cbb36b.chunk.css",
@@ -25,7 +25,7 @@
     "static/media/schoolErpLogo.svg": "/JamilKhanEmon/static/media/schoolErpLogo.2ada0a46c462bdd1827d4b1e2b04bfa6.svg",
     "static/media/talksCardBack.svg": "/JamilKhanEmon/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.659d6e4c.css.map": "/JamilKhanEmon/static/css/main.659d6e4c.css.map",
-    "main.a2ee98d9.js.map": "/JamilKhanEmon/static/js/main.a2ee98d9.js.map",
+    "main.72b1e9f2.js.map": "/JamilKhanEmon/static/js/main.72b1e9f2.js.map",
     "64.bba8fa55.chunk.css.map": "/JamilKhanEmon/static/css/64.bba8fa55.chunk.css.map",
     "64.f858a90b.chunk.js.map": "/JamilKhanEmon/static/js/64.f858a90b.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/JamilKhanEmon/static/css/769.b3cbb36b.chunk.css.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.659d6e4c.css",
-    "static/js/main.a2ee98d9.js"
+    "static/js/main.72b1e9f2.js"
   ]
 }
