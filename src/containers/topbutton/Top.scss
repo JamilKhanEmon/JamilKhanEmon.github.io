@@ -1,22 +1,95 @@
 @import "../../_globalColor";
 
 #topButton {
-  visibility: hidden;
   position: fixed;
-  bottom: 90px;
+  bottom: 95px;
   right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: $buttonColor;
-  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 15px;
-  font-size: 25px;
+  z-index: 999;
+  outline: none;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.92);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  i.fa-rocket {
+    font-size: 1.15rem;
+    transition: transform 0.25s ease;
+  }
+
+  // Light Theme styling (as shown in user's image)
+  &.light-theme {
+    background-color: #ffffff;
+    color: #2d3436;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background-color: #f8f9fa;
+      color: #111827;
+      border-color: rgba(0, 0, 0, 0.24);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+      transform: translateY(-3px) scale(1.05);
+
+      i.fa-rocket {
+        transform: translateY(-2px) scale(1.1);
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+  }
+
+  // Dark Theme styling
+  &.dark-theme {
+    background-color: #1e222d;
+    color: #f1f2f6;
+    border: 1.5px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+
+    &:hover {
+      background-color: #252b3b;
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.55);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+      transform: translateY(-3px) scale(1.05);
+
+      i.fa-rocket {
+        transform: translateY(-2px) scale(1.1);
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+  }
 }
 
-#topButton:hover {
-  background-color: $topButtonHover;
-  transition: all ease-in-out 0.2s;
+@media (max-width: 768px) {
+  #topButton {
+    bottom: 90px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+
+    i.fa-rocket {
+      font-size: 1rem;
+    }
+  }
 }

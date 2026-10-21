@@ -108,7 +108,11 @@ export default function ChatBot() {
           {isOpen ? (
             <i className="fas fa-times" />
           ) : (
-            <i className="fas fa-robot" />
+            <img
+              src={`${process.env.PUBLIC_URL}/android-chrome-192x192.png?v=2026`}
+              alt="Jamil AI"
+              className="circle-btn-logo"
+            />
           )}
         </div>
         {!isOpen && hasUnread && <span className="chatbot-unread-dot" />}
@@ -121,7 +125,11 @@ export default function ChatBot() {
           <div className="chatbot-header">
             <div className="chatbot-header-info">
               <div className="chatbot-avatar">
-                <i className="fas fa-robot" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/android-chrome-192x192.png?v=2026`}
+                  alt="Jamil AI"
+                  className="chatbot-avatar-img"
+                />
                 <span className="chatbot-status-indicator" />
               </div>
               <div className="chatbot-header-text">
@@ -177,7 +185,11 @@ export default function ChatBot() {
               >
                 {msg.role === "assistant" && (
                   <div className="msg-avatar">
-                    <i className="fas fa-brain" />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/android-chrome-192x192.png?v=2026`}
+                      alt="Jamil AI"
+                      className="msg-avatar-img"
+                    />
                   </div>
                 )}
                 <div className="chatbot-message-content-col">
@@ -232,7 +244,11 @@ export default function ChatBot() {
             {isLoading && (
               <div className="chatbot-message-row assistant-row">
                 <div className="msg-avatar">
-                  <i className="fas fa-brain" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/android-chrome-192x192.png?v=2026`}
+                    alt="Jamil AI"
+                    className="msg-avatar-img"
+                  />
                 </div>
                 <div className="chatbot-message-bubble typing-bubble">
                   <span className="typing-dot" />
