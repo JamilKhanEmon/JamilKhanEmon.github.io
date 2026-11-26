@@ -2,58 +2,61 @@
 
 .card-image {
   max-width: 100%;
-  max-height: 200px;
+  max-height: 105px;
   object-fit: contain;
   width: auto;
   border-radius: 8px;
 }
 .card-title {
   color: $titleColor;
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 1.12rem;
+  line-height: 1.35;
   font-weight: 700;
-  margin: 15px 0 0 0;
+  margin: 10px 0 6px 0;
 }
 .card-subtitle {
   color: $cardSubtitle;
-  font-size: 17px;
-  line-height: 1.5rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin: 0 0 12px 0;
 }
 .project-card {
   display: flex;
   flex-direction: column;
   background-color: $lightBackground2;
-  padding: 1.5rem;
-  border-radius: 10px;
+  padding: 1.15rem;
+  border-radius: 14px;
   border: 1px solid $lightBorder1;
-  justify-content: center;
+  justify-content: space-between;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .project-card-dark {
-  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 10px 30px -15px rgba(0, 0, 0, 0.55);
 }
 
 .project-detail {
   text-align: center;
 }
 .project-card-light:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 20px 38px -14px rgba(99, 102, 241, 0.22);
 }
 .project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+  transform: translateY(-4px);
+  border-color: rgba(0, 229, 255, 0.45);
+  box-shadow: 0px 20px 38px -14px rgba(99, 102, 241, 0.32);
 }
 .project-image {
   position: relative;
-  height: 250px;
+  height: 125px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -62,8 +65,8 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.15rem;
 }
 
 .project-card-footer span.project-tag {

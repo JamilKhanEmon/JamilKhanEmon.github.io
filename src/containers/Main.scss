@@ -1,7 +1,33 @@
 @import "../_globalColor";
 
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.portfolio-content {
+  position: relative;
+  z-index: 1;
+}
+
+.light-mode {
+  background-color: $lightBackground1;
+  color: $textColor;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
 .dark-mode {
-  background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+  background: radial-gradient(
+      circle at 15% 15%,
+      rgba(99, 102, 241, 0.14),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(0, 229, 255, 0.08),
+      transparent 38%
+    ),
+    $darkBackground;
+  color: $textColorDark;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }

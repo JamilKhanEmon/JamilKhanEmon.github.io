@@ -9,6 +9,11 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
+
+  const whatsappDigits = contactInfo.number
+    ? contactInfo.number.replace(/\D/g, "")
+    : "";
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
@@ -30,24 +35,31 @@ export default function Contact() {
               }
             >
               {contactInfo.number && (
-                <>
+                <div className="contact-action-row">
                   <a
-                    className="contact-detail"
-                    href={"tel:" + contactInfo.number}
+                    className="contact-detail contact-whatsapp-link"
+                    href={`https://wa.me/${whatsappDigits}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Chat on WhatsApp"
                   >
-                    {contactInfo.number}
+                    <i className="fab fa-whatsapp whatsapp-icon" />
+                    <span>{contactInfo.number}</span>
                   </a>
-                  <br />
-                  <br />
-                </>
+                </div>
               )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
-                {contactInfo.email_address}
-              </a>
-              <br />
+
+              <div className="contact-action-row">
+                <a
+                  className="contact-detail-email"
+                  href={`mailto:${contactInfo.email_address}`}
+                  title="Send email"
+                >
+                  <i className="far fa-envelope email-icon" />
+                  <span>{contactInfo.email_address}</span>
+                </a>
+              </div>
+
               <br />
               <SocialMedia />
             </div>

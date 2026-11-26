@@ -3,49 +3,49 @@ Certain colors are used for different and multiply types of elements.
 For greater control over colors visit each components .scss file. */
 
 // button colors
-$buttonColor: #55198b;
-$buttonHover: #8c43ce;
-$topButtonHover: #000;
+$buttonColor: #6366f1;
+$buttonHover: #4f46e5;
+$topButtonHover: #00e5ff;
 
 // text colors light theme
-$titleColor: #000000;
-$textColor: #000000;
-$subTitle: #868e96;
-$cardSubtitle: #666666;
-$talkCardSubTitle: #7f8287;
-$blogCardTitleColor: #262626;
+$titleColor: #0f172a;
+$textColor: #0f172a;
+$subTitle: #64748b;
+$cardSubtitle: #475569;
+$talkCardSubTitle: #64748b;
+$blogCardTitleColor: #0f172a;
 
 // text color dark theme
-$textColorDark: #ffffff;
+$textColorDark: #f1f5f9;
 
 // toggle switch colors
-$toggleCheck: #2196f3;
-$toggleSwitchSliderBG: #ccc;
+$toggleCheck: #6366f1;
+$toggleSwitchSliderBG: #cbd5e1;
 
 // githubRepo specific colors
-$githubRepoCardLanguageColorBG: #0000ff;
-$githubRepoCardColor: rgb(88, 96, 105);
-$githubRepoCardRepoCardStatsColor: rgb(106, 115, 125);
-$githubRepoCardRepoNameColor: rgb(36, 41, 46);
-$githubProfileCardLocationTS: #ffebcd;
-$githubProfileCardBorder: #6c63ff;
+$githubRepoCardLanguageColorBG: #6366f1;
+$githubRepoCardColor: #475569;
+$githubRepoCardRepoCardStatsColor: #64748b;
+$githubRepoCardRepoNameColor: #0f172a;
+$githubProfileCardLocationTS: #e0f2fe;
+$githubProfileCardBorder: #00e5ff;
 
 // light background colors
-$lightBackground1: #fff;
-$lightBackground2: rgb(255, 255, 255);
-$lightBackground3: #f5f2f4;
-$blogCardContainerColor: #586069;
+$lightBackground1: #f8fafc;
+$lightBackground2: #ffffff;
+$lightBackground3: #f1f5f9;
+$blogCardContainerColor: #475569;
 // dark background colors
-$darkBackground: #171c28;
+$darkBackground: #0b0f19;
 
 // light theme box shadows
-$lightBoxShadowDark: rgba(0, 0, 0, 0.2);
-$lightBoxShadow: rgba(0, 0, 0, 0.1);
-$lightBoxShadowDarker: rgba(0, 0, 0, 0.3);
+$lightBoxShadowDark: rgba(15, 23, 42, 0.14);
+$lightBoxShadow: rgba(15, 23, 42, 0.08);
+$lightBoxShadowDarker: rgba(15, 23, 42, 0.22);
 
 // dark theme box shadows
-$darkBoxShadow: #d9dbdf;
-$darkBoxShadow2: #ffffff;
+$darkBoxShadow: rgba(99, 102, 241, 0.28);
+$darkBoxShadow2: rgba(0, 229, 255, 0.25);
 
 // linear gradients
 $experienceCardBlurredDivLG: linear-gradient(

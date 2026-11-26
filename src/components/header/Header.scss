@@ -5,10 +5,17 @@
   max-height: 100px;
 }
 
+.headroom {
+  z-index: 100 !important;
+}
+
 /* header */
 
 .dark-menu {
-  background-color: $darkBackground !important;
+  background-color: rgba(11, 15, 25, 0.72) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: $textColorDark;
 }
 
@@ -17,14 +24,19 @@
 }
 
 .dark-menu li a:hover {
-  background-color: $buttonColor !important;
+  background-color: rgba(99, 102, 241, 0.18) !important;
+  color: #00e5ff !important;
 }
 
 .header {
-  background-color: $lightBackground1;
+  background-color: rgba(248, 250, 252, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
   max-width: 100%;
-  padding: 15px 20px;
+  padding: 12px 24px;
   margin: 0px auto;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .header ul {
@@ -40,14 +52,20 @@
 
 .header li a {
   display: block;
-  padding: 15px 20px;
+  padding: 10px 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
   color: $textColor;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: $headerHoverBG;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: $buttonColor;
 }
 
 .header .logo {

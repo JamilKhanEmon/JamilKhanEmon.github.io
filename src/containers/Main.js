@@ -14,6 +14,7 @@ import Podcast from "./podcast/Podcast";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import ChatBot from "../components/chatBot/ChatBot";
+import SpiderWebBackground from "../components/spiderWebBackground/SpiderWebBackground";
 import Twitter from "./twitter-embed/twitter";
 import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
@@ -23,8 +24,14 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const darkPref =
+    typeof window !== "undefined" && window.matchMedia
+      ? window.matchMedia("(prefers-color-scheme: dark)")
+      : null;
+  const [isDark, setIsDark] = useLocalStorage(
+    "isDark",
+    darkPref ? darkPref.matches : true
+  );
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -45,31 +52,34 @@ const Main = () => {
   };
 
   return (
-    <div className={isDark ? "dark-mode" : null}>
+    <div className={isDark ? "dark-mode app-shell" : "light-mode app-shell"}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
-        {isShowingSplashAnimation && splashScreen.enabled ? (
-          <SplashScreen />
-        ) : (
-          <>
-            <Header />
-            <Greeting />
-            <Skills />
-            <StackProgress />
-            <Education />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Profile />
-            <Footer />
-            <ScrollToTopButton />
-            <ChatBot />
-          </>
-        )}
+        <SpiderWebBackground />
+        <div className="portfolio-content">
+          {isShowingSplashAnimation && splashScreen.enabled ? (
+            <SplashScreen />
+          ) : (
+            <>
+              <Header />
+              <Greeting />
+              <Skills />
+              <StackProgress />
+              <Education />
+              <WorkExperience />
+              <Projects />
+              <StartupProject />
+              <Achievement />
+              <Blogs />
+              <Talks />
+              <Twitter />
+              <Podcast />
+              <Profile />
+              <Footer />
+              <ScrollToTopButton />
+              <ChatBot />
+            </>
+          )}
+        </div>
       </StyleProvider>
     </div>
   );

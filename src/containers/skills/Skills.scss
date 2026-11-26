@@ -15,7 +15,20 @@
   margin-bottom: 30px;
 }
 
-.skills-image-div > img {
+.skills-image-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.skills-lottie-stage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skills-image-div > img,
+.skills-lottie-stage > img {
   max-width: 100%;
   height: auto;
 }

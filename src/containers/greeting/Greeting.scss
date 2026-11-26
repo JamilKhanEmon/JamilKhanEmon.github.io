@@ -15,14 +15,12 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -30,8 +28,89 @@
   margin-bottom: 30px;
 }
 
-.empty-div {
-  margin-bottom: 40px;
+.availability-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.65);
+    animation: pulseStatus 2s infinite;
+  }
+}
+
+.role-rotator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 18px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  .role-prefix {
+    color: #00e5ff;
+  }
+
+  .role-badge {
+    background: linear-gradient(90deg, #818cf8, #00e5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeSlideUp 0.45s ease;
+  }
+}
+
+.hero-proof-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 24px;
+
+  .proof-chip {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.28);
+    color: #818cf8;
+  }
+}
+
+@keyframes pulseStatus {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .button-greeting-div {
@@ -43,14 +122,15 @@
 }
 
 .greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
+  font-size: 58px;
+  line-height: 1.08;
+  margin: 0;
   color: $textColor !important;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .greeting-image-div > img {
@@ -103,20 +183,33 @@
   .button-greeting-div {
     justify-content: space-around;
   }
+  .availability-pill {
+    margin: 0 auto 14px;
+    display: flex;
+    width: fit-content;
+  }
+  .role-rotator {
+    justify-content: center;
+    font-size: 0.98rem;
+  }
+  .hero-proof-chips {
+    justify-content: center;
+  }
   .greeting-text {
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
   }
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.55;
     text-align: center;
   }
   .greeting-main {
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    height: auto;
+    margin-top: 24px;
   }
 }
 

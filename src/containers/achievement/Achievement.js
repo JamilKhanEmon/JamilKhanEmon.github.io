@@ -45,6 +45,7 @@ export default function Achievement() {
                     description: card.subtitle,
                     image: card.image,
                     imageAlt: card.imageAlt,
+                    fullBleed: card.fullBleed,
                     footer: card.footerLink
                   }}
                 />

@@ -1,0 +1,230 @@
+@import "../../_globalColor";
+
+.hero-terminal {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: "JetBrains Mono", monospace;
+  cursor: text;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &.dark {
+    background: rgba(15, 23, 42, 0.84);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(99, 102, 241, 0.32);
+    box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.7),
+      0 0 36px -12px rgba(99, 102, 241, 0.35);
+    color: #e2e8f0;
+  }
+
+  &.light {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    box-shadow: 0 20px 50px -15px rgba(15, 23, 42, 0.16);
+    color: #0f172a;
+  }
+
+  &:hover {
+    border-color: rgba(0, 229, 255, 0.45);
+  }
+}
+
+.hero-terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  font-size: 0.76rem;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 7px;
+
+  .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    &.red {
+      background: #ef4444;
+    }
+    &.yellow {
+      background: #f59e0b;
+    }
+    &.green {
+      background: #10b981;
+    }
+  }
+}
+
+.terminal-title {
+  opacity: 0.75;
+  font-size: 0.74rem;
+}
+
+.terminal-badge {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.hero-terminal-body {
+  padding: 16px 18px;
+  height: 230px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 0.79rem;
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.terminal-cmd-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+  font-weight: 600;
+  word-break: break-word;
+
+  .prompt {
+    color: #00e5ff;
+    font-weight: 700;
+  }
+}
+
+.output-line {
+  font-size: 0.76rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding-left: 14px;
+
+  &.system {
+    padding-left: 0;
+    color: #94a3b8;
+    font-style: italic;
+  }
+  &.info {
+    color: #94a3b8;
+  }
+  &.accent {
+    color: #818cf8;
+  }
+  &.success {
+    color: #10b981;
+  }
+  &.error {
+    color: #f87171;
+  }
+}
+
+.hero-terminal.light .output-line.info,
+.hero-terminal.light .output-line.system {
+  color: #475569;
+}
+
+.terminal-input-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+
+  .prompt {
+    color: #00e5ff;
+    font-weight: 700;
+  }
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  padding: 2px 0;
+
+  &::placeholder {
+    color: #64748b;
+    opacity: 0.8;
+  }
+}
+
+.hero-terminal-examples {
+  padding: 10px 16px 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(99, 102, 241, 0.05);
+  text-align: left;
+  cursor: default;
+}
+
+.examples-label {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.7;
+  margin-bottom: 7px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+}
+
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.example-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  border-radius: 7px;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  color: #818cf8;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.24);
+    border-color: #00e5ff;
+    color: #00e5ff;
+  }
+}
+
+.hero-terminal.light .example-chip {
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.copy-mini-btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+  font-size: 0.68rem;
+  cursor: pointer;
+  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 1;
+    color: #10b981;
+  }
+}

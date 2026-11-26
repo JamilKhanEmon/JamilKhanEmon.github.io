@@ -39,7 +39,7 @@ JAMIL KHAN'S COMPLETE PROFESSIONAL DOSSIER:
    - Professional Title: Full Stack AI & Automation Engineer
    - Location: Dhaka, Bangladesh
    - Work Availability: Open for Full-Time, Remote, Contract, or Consulting AI Engineering positions.
-   - Primary Email: jamilkhan.ju@gmail.com
+   - Primary Email: jamilkhanemon@gmail.com
    - Phone / WhatsApp: +880 1760 413449
    - Official GitHub: https://github.com/JamilKhanEmon
    - Official LinkedIn: https://linkedin.com/in/jamilkhanemon
@@ -162,10 +162,10 @@ export async function sendChatMessage(userMessage, history = []) {
 
     return (
       reply ||
-      "Jamil Khan is a Full Stack AI Engineer specializing in LLMs, RAG pipelines, and AI Agents. Feel free to connect directly with Jamil at jamilkhan.ju@gmail.com or WhatsApp: +880 1760 413449!"
+      "Jamil Khan is a Full Stack AI Engineer specializing in LLMs, RAG pipelines, and AI Agents. Feel free to connect directly with Jamil at jamilkhanemon@gmail.com or WhatsApp: +880 1760 413449!"
     );
   } catch (err) {
     console.error("Error communicating with Jamil AI assistant:", err);
-    return "I'm having trouble connecting right now. Feel free to reach out directly to Jamil Khan at jamilkhan.ju@gmail.com or WhatsApp: +880 1760 413449!";
+    return "I'm having trouble connecting right now. Feel free to reach out directly to Jamil Khan at jamilkhanemon@gmail.com or WhatsApp: +880 1760 413449!";
   }
 }

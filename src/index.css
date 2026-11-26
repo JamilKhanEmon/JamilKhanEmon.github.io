@@ -13,8 +13,8 @@
   font-display: swap;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "JetBrains Mono", source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
 }
 html,
 body {
@@ -22,9 +22,22 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 17px / 26px "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+.greeting-text,
+.skills-heading {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.02em;
+}
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: inherit;
 }
 /* Media Query */
 @media (max-width: 1380px) {

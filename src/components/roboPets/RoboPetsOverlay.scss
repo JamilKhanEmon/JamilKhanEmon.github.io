@@ -1,0 +1,142 @@
+.desk-robo-pets {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.robo-pet {
+  position: absolute;
+  bottom: 11.5%;
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 6px 12px rgba(99, 102, 241, 0.35));
+  transition: filter 0.2s ease;
+
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 8px 18px rgba(0, 229, 255, 0.7));
+  }
+}
+
+.pet-flip {
+  transition: transform 0.28s ease;
+}
+
+.pet-bubble {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.92);
+  color: #f472b6;
+  border: 1px solid rgba(244, 114, 182, 0.55);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.pet-tail {
+  transform-origin: 18px 44px;
+  animation: cuteTailWag 0.75s ease-in-out infinite alternate;
+}
+
+.pet-led {
+  animation: cuteLedPulse 1.6s ease-in-out infinite;
+}
+
+.pet-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cuteBlink 4.2s ease-in-out infinite;
+}
+
+.robo-pet[data-moving="true"] .pet-flip {
+  animation: cuteHop 0.45s ease-in-out infinite alternate;
+}
+
+.robo-pet[data-moving="true"] .leg-a {
+  transform-origin: center top;
+  animation: cuteWalkA 0.35s ease-in-out infinite alternate;
+}
+
+.robo-pet[data-moving="true"] .leg-b {
+  transform-origin: center top;
+  animation: cuteWalkB 0.35s ease-in-out infinite alternate;
+}
+
+@keyframes cuteTailWag {
+  0% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes cuteLedPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes cuteBlink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.15);
+  }
+}
+
+@keyframes cuteHop {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-2.5px);
+  }
+}
+
+@keyframes cuteWalkA {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes cuteWalkB {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .robo-pet {
+    bottom: 11%;
+  }
+  .robo-pet svg {
+    width: 48px;
+    height: auto;
+  }
+}

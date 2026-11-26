@@ -7,7 +7,7 @@ import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // disabled for instant first paint & better UX
   animation: splashAnimation,
   duration: 2000
 };
@@ -31,7 +31,7 @@ const greeting = {
 const socialMediaLinks = {
   github: "https://github.com/JamilKhanEmon",
   linkedin: "https://linkedin.com/in/jamilkhanemon",
-  gmail: "jamilkhan.ju@gmail.com",
+  gmail: "jamilkhanemon@gmail.com",
   gitlab: "",
   facebook: "",
   medium: "",
@@ -256,6 +256,20 @@ const achievementSection = {
           url: "https://www.techscience.com/cmc/online/detail/22560"
         }
       ]
+    },
+    {
+      title: "Learn C Programming: Part One (Published Book)",
+      subtitle:
+        "Eliva Press (2023) • ISBN: 978-9994983711. Beginner-friendly Computer Science book covering C syntax, data types, operators, control structures, functions, arrays, and pointers.",
+      image: require("./assets/images/elivaBookCover.jpg"),
+      imageAlt: "Learn C Programming: Part One - Eliva Press",
+      fullBleed: true,
+      footerLink: [
+        {
+          name: "View Book",
+          url: "https://www.elivapress.com/en/book/book-5799919985/"
+        }
+      ]
     }
   ],
   display: true
@@ -294,7 +308,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project, AI agent pipeline, workflow automation, or just want to say hi? My inbox is open for all.",
   number: "+880 1760 413449",
-  email_address: "jamilkhan.ju@gmail.com"
+  email_address: "jamilkhanemon@gmail.com"
 };
 
 // Twitter Timeline Section

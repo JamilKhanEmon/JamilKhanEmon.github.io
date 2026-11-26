@@ -17,20 +17,66 @@
   font-weight: 400;
 }
 
+.contact-action-row {
+  margin-bottom: 14px;
+}
+
 .contact-detail,
 .contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
-  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  font-weight: 500;
   color: $subTitle;
   text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 6px 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.25s ease, transform 0.2s ease;
 }
 
 .contact-detail:hover,
 .contact-detail-email:hover {
-  color: $textColor;
-  text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
+  color: #00e5ff;
+  transform: translateX(3px);
+}
+
+.whatsapp-icon {
+  color: #25d366;
+  font-size: 0.9em;
+}
+
+.email-icon {
+  color: #818cf8;
+  font-size: 0.85em;
+}
+
+.contact-action-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #818cf8;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+}
+
+.whatsapp-badge {
+  background: rgba(37, 211, 102, 0.14);
+  border-color: rgba(37, 211, 102, 0.38);
+  color: #25d366;
+}
+
+.copied-badge {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #10b981;
 }
 
 .contact-subtitle {
@@ -78,7 +124,9 @@
 
   .contact-detail,
   .contact-detail-email {
-    font-size: 20px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .contact-image-div {

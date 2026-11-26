@@ -70,7 +70,7 @@ export default function ChatBot() {
         {
           role: "assistant",
           content:
-            "I encountered an error processing your query. Please contact Jamil Khan directly at jamilkhan.ju@gmail.com."
+            "I encountered an error processing your query. Please contact Jamil Khan directly at jamilkhanemon@gmail.com."
         }
       ]);
     } finally {
@@ -197,7 +197,7 @@ export default function ChatBot() {
                     <p>{msg.content}</p>
                   </div>
                   {msg.role === "assistant" &&
-                    (msg.content.includes("jamilkhan.ju@gmail.com") ||
+                    (msg.content.includes("jamilkhanemon@gmail.com") ||
                       msg.content.includes("+880 1760") ||
                       msg.content.toLowerCase().includes("whatsapp") ||
                       msg.content.toLowerCase().includes("email") ||
@@ -206,7 +206,7 @@ export default function ChatBot() {
                       msg.content.includes("যোগাযোগ")) && (
                       <div className="chatbot-quick-contact-actions">
                         <a
-                          href="mailto:jamilkhan.ju@gmail.com"
+                          href="mailto:jamilkhanemon@gmail.com"
                           className="chatbot-contact-action-btn email-action"
                           target="_blank"
                           rel="noopener noreferrer"

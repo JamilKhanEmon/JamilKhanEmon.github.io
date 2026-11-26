@@ -3,15 +3,17 @@
 .repo-card-div {
   color: $githubRepoCardColor;
   background-color: $lightBackground2;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  padding: 2rem;
+  padding: 1.75rem;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 .repo-card-div:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 20px 38px -14px rgba(99, 102, 241, 0.25);
 }
 
 .repo-stats {
