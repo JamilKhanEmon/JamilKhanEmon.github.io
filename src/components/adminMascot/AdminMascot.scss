@@ -1,32 +1,74 @@
-.admin-mascot {
+.admin-mascot-trio {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  margin: -0.5rem auto 0.75rem;
-  filter: drop-shadow(0 10px 22px rgba(99, 102, 241, 0.3));
+  gap: 6px;
+  margin: -0.5rem auto 0.85rem;
+  filter: drop-shadow(0 10px 22px rgba(99, 102, 241, 0.32));
+}
+
+.mascot-unit {
+  overflow: visible;
+}
+
+.mascot-bot {
+  animation: mascotFloat 3.1s ease-in-out infinite;
+}
+
+.mascot-cat {
+  animation: mascotFloat 3.6s ease-in-out infinite 0.3s;
+}
+
+.mascot-dog {
+  animation: mascotFloat 3.3s ease-in-out infinite 0.6s;
+}
+
+.bot-antenna {
+  animation: antennaPulse 1.6s ease-in-out infinite;
 }
 
 .mascot-paw {
   transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.admin-mascot.hiding .paw-left {
-  transform: translate(6px, -36px) rotate(10deg);
+.admin-mascot-trio.hiding .paw-left {
+  transform: translate(6px, -32px) rotate(10deg);
 }
 
-.admin-mascot.hiding .paw-right {
-  transform: translate(-6px, -36px) rotate(-10deg);
+.admin-mascot-trio.hiding .paw-right {
+  transform: translate(-6px, -32px) rotate(-10deg);
 }
 
-.admin-mascot.peeking .paw-left {
-  transform: translate(6px, -36px) rotate(10deg);
+.admin-mascot-trio.peeking .paw-left {
+  transform: translate(6px, -32px) rotate(10deg);
 }
 
-.admin-mascot.peeking .paw-right {
-  transform: translate(-2px, -16px) rotate(-4deg);
+.admin-mascot-trio.peeking .paw-right {
+  transform: translate(-2px, -14px) rotate(-4deg);
 }
 
-.admin-mascot.error svg {
+.admin-mascot-trio.error .mascot-unit {
   animation: mascotShake 0.35s ease;
+}
+
+@keyframes mascotFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes antennaPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes mascotShake {
