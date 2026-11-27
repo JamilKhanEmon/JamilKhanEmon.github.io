@@ -1,0 +1,43 @@
+.admin-mascot {
+  display: flex;
+  justify-content: center;
+  margin: -0.5rem auto 0.75rem;
+  filter: drop-shadow(0 10px 22px rgba(99, 102, 241, 0.3));
+}
+
+.mascot-paw {
+  transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.admin-mascot.hiding .paw-left {
+  transform: translate(6px, -36px) rotate(10deg);
+}
+
+.admin-mascot.hiding .paw-right {
+  transform: translate(-6px, -36px) rotate(-10deg);
+}
+
+.admin-mascot.peeking .paw-left {
+  transform: translate(6px, -36px) rotate(10deg);
+}
+
+.admin-mascot.peeking .paw-right {
+  transform: translate(-2px, -16px) rotate(-4deg);
+}
+
+.admin-mascot.error svg {
+  animation: mascotShake 0.35s ease;
+}
+
+@keyframes mascotShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}

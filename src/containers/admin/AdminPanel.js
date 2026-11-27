@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import StyleContext from "../../contexts/StyleContext";
 import {usePortfolio} from "../../contexts/PortfolioContext";
+import AdminMascot from "../../components/adminMascot/AdminMascot";
 import {
   isSupabaseConfigured,
   savePortfolioData,
@@ -30,6 +31,8 @@ export default function AdminPanel({onExit}) {
   const [email, setEmail] = useState("jamilkhanemon@gmail.com");
   const [password, setPassword] = useState("");
   const [authError, setAuthError] = useState("");
+  const [focusField, setFocusField] = useState("idle");
+  const [showPassword, setShowPassword] = useState(false);
 
   const [activeTab, setActiveTab] = useState("profile");
   const [draft, setDraft] = useState(() => cloneData(portfolio));
@@ -162,6 +165,12 @@ export default function AdminPanel({onExit}) {
     return (
       <div className={`admin-shell ${isDark ? "dark" : "light"}`}>
         <div className="admin-login-card">
+          <AdminMascot
+            focusField={focusField}
+            emailLength={email.length}
+            showPassword={showPassword}
+            hasError={Boolean(authError)}
+          />
           <div className="admin-login-header">
             <span className="admin-eyebrow">PORTFOLIO CMS</span>
             <h2>Admin Sign In</h2>
@@ -185,19 +194,34 @@ export default function AdminPanel({onExit}) {
               <input
                 type="email"
                 value={email}
+                onFocus={() => setFocusField("email")}
+                onBlur={() => setFocusField("idle")}
                 onChange={e => setEmail(e.target.value)}
                 required
               />
             </label>
             <label>
               Password
-              <input
-                type="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                placeholder="Enter your password"
-                required
-              />
+              <div className="password-input-wrap">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onFocus={() => setFocusField("password")}
+                  onBlur={() => setFocusField("idle")}
+                  onChange={e => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                  required
+                />
+                <button
+                  type="button"
+                  className="password-toggle-btn"
+                  onMouseDown={e => e.preventDefault()}
+                  onClick={() => setShowPassword(p => !p)}
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                  <i className={showPassword ? "far fa-eye-slash" : "far fa-eye"} />
+                </button>
+              </div>
             </label>
             <button type="submit" className="admin-btn primary">
               Sign In to Dashboard
