@@ -4,8 +4,9 @@ import "./Greeting.scss";
 import HeroTerminal from "../../components/heroTerminal/HeroTerminal";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
+import {illustration} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../contexts/PortfolioContext";
 
 const ROLES = [
   "Full Stack AI Engineer",
@@ -16,6 +17,9 @@ const ROLES = [
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {greeting}
+  } = usePortfolio();
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {

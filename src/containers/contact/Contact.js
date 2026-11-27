@@ -1,14 +1,18 @@
 import React, {useContext} from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {illustration, contactInfo} from "../../portfolio";
+import {illustration} from "../../portfolio";
 import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../contexts/PortfolioContext";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {contactInfo}
+  } = usePortfolio();
 
   const whatsappDigits = contactInfo.number
     ? contactInfo.number.replace(/\D/g, "")

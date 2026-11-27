@@ -20,7 +20,9 @@ import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
+import {PortfolioProvider} from "../contexts/PortfolioContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
+import AdminPanel from "./admin/AdminPanel";
 import "./Main.scss";
 
 const Main = () => {
@@ -34,6 +36,21 @@ const Main = () => {
   );
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
+  const [isAdminRoute, setIsAdminRoute] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      (window.location.hash === "#/admin" || window.location.hash === "#admin")
+  );
+
+  useEffect(() => {
+    const onHashChange = () => {
+      setIsAdminRoute(
+        window.location.hash === "#/admin" || window.location.hash === "#admin"
+      );
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
   useEffect(() => {
     if (splashScreen.enabled) {
@@ -54,32 +71,41 @@ const Main = () => {
   return (
     <div className={isDark ? "dark-mode app-shell" : "light-mode app-shell"}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
-        <SpiderWebBackground />
-        <div className="portfolio-content">
-          {isShowingSplashAnimation && splashScreen.enabled ? (
-            <SplashScreen />
-          ) : (
-            <>
-              <Header />
-              <Greeting />
-              <Skills />
-              <StackProgress />
-              <Education />
-              <WorkExperience />
-              <Projects />
-              <StartupProject />
-              <Achievement />
-              <Blogs />
-              <Talks />
-              <Twitter />
-              <Podcast />
-              <Profile />
-              <Footer />
-              <ScrollToTopButton />
-              <ChatBot />
-            </>
-          )}
-        </div>
+        <PortfolioProvider>
+          <SpiderWebBackground />
+          <div className="portfolio-content">
+            {isAdminRoute ? (
+              <AdminPanel
+                onExit={() => {
+                  window.location.hash = "";
+                  setIsAdminRoute(false);
+                }}
+              />
+            ) : isShowingSplashAnimation && splashScreen.enabled ? (
+              <SplashScreen />
+            ) : (
+              <>
+                <Header />
+                <Greeting />
+                <Skills />
+                <StackProgress />
+                <Education />
+                <WorkExperience />
+                <Projects />
+                <StartupProject />
+                <Achievement />
+                <Blogs />
+                <Talks />
+                <Twitter />
+                <Podcast />
+                <Profile />
+                <Footer />
+                <ScrollToTopButton />
+                <ChatBot />
+              </>
+            )}
+          </div>
+        </PortfolioProvider>
       </StyleProvider>
     </div>
   );
