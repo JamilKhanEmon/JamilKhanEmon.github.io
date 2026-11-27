@@ -26,23 +26,36 @@
 }
 
 .admin-login-card {
+  width: 100%;
   max-width: 440px;
   margin: 4rem auto;
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 2.25rem;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(99, 102, 241, 0.32);
   box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.6);
 
   h2 {
     margin: 4px 0 8px;
+    font-size: 1.65rem;
   }
   p {
     font-size: 0.9rem;
     color: #94a3b8;
+    line-height: 1.5;
     margin-bottom: 1.5rem;
   }
+
+  .admin-btn {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 0.92rem;
+  }
+}
+
+.admin-shell.light .admin-login-card p {
+  color: #475569;
 }
 
 .admin-shell.light .admin-login-card,
@@ -118,6 +131,57 @@
   margin-bottom: 8px;
 }
 
+.admin-card,
+.admin-login-card {
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-align: left;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: rgba(15, 23, 42, 0.55);
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.22);
+    }
+  }
+}
+
+.admin-shell.light .admin-card,
+.admin-shell.light .admin-login-card {
+  label {
+    color: #475569;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.16);
+    color: #0f172a;
+  }
+}
+
 .admin-card {
   padding: 1.4rem;
   border-radius: 14px;
@@ -131,38 +195,6 @@
   h3 {
     margin: 0 0 6px;
   }
-
-  label {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #94a3b8;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(148, 163, 184, 0.25);
-    background: rgba(15, 23, 42, 0.55);
-    color: inherit;
-    font-family: inherit;
-    font-size: 0.9rem;
-  }
-}
-
-.admin-shell.light .admin-card input[type="text"],
-.admin-shell.light .admin-card input[type="email"],
-.admin-shell.light .admin-card input[type="password"],
-.admin-shell.light .admin-card textarea {
-  background: #f8fafc;
-  color: #0f172a;
 }
 
 .admin-form {
