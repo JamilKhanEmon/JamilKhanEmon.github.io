@@ -1,9 +1,11 @@
 import {createClient} from "@supabase/supabase-js";
 
 const SUPABASE_URL =
-  process.env.REACT_APP_SUPABASE_URL || "";
+  process.env.REACT_APP_SUPABASE_URL ||
+  "https://gxznygssyzghvhyxpijn.supabase.co";
 const SUPABASE_ANON_KEY =
-  process.env.REACT_APP_SUPABASE_ANON_KEY || "";
+  process.env.REACT_APP_SUPABASE_ANON_KEY ||
+  "sb_publishable_4fi9TvcEcfQKtjaQbTMR6A_o8rs790w";
 
 export const isSupabaseConfigured = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
