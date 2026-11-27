@@ -3,7 +3,6 @@ import StyleContext from "../../contexts/StyleContext";
 import {usePortfolio} from "../../contexts/PortfolioContext";
 import AdminMascot from "../../components/adminMascot/AdminMascot";
 import {
-  isSupabaseConfigured,
   savePortfolioData,
   supabase,
   uploadPortfolioAsset
@@ -174,17 +173,8 @@ export default function AdminPanel({onExit}) {
           <div className="admin-login-header">
             <span className="admin-eyebrow">PORTFOLIO CMS</span>
             <h2>Admin Sign In</h2>
-            <p>Sign in with your Supabase Email &amp; Password to manage live portfolio content.</p>
+            <p>Sign in with your Email &amp; Password to manage live portfolio content.</p>
           </div>
-
-          {!isSupabaseConfigured && (
-            <div className="admin-alert warning">
-              <strong>Supabase not connected yet:</strong> Set{" "}
-              <code>REACT_APP_SUPABASE_URL</code> and{" "}
-              <code>REACT_APP_SUPABASE_ANON_KEY</code> (see{" "}
-              <code>SUPABASE_SETUP.md</code>).
-            </div>
-          )}
 
           {authError && <div className="admin-alert error">{authError}</div>}
 
